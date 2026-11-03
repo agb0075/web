@@ -64,18 +64,26 @@ body {
 
 .contenedor-paginas {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .seccion-home {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;   
+    gap: 80px;                 
     padding: 60px 0;
+    width: 100%;
 }
 
 .contenido-home {
     flex: 1;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contenido-home h1 {
@@ -112,13 +120,26 @@ body {
 .imagen-portada {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 500px;          
+    max-width: 380px;            
+    overflow: hidden;
 }
 
-.imagen-portada img {
-    max-width: 100%;
-    height: auto;
-    max-height: 500px;
+.enlace-video-portada {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-portada video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;           
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
 }
 
 .seccion-catalogo {
@@ -294,4 +315,69 @@ body {
     max-width: 500px;
     text-align: center;
     line-height: 1.4;
+}
+
+/*responsive*/
+
+@media (max-width: 992px) {
+    body {
+        padding: 0 20px;
+    }
+    .seccion-home {
+        gap: 40px;
+    }
+    .productos {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productos {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .cabecera-catalogo {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .seccion-detalle {
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px 0;
+    }
+
+    .contenido-detalle {
+        align-items: center;
+        text-align: center;
+    }
+
+    .tallas {
+        justify-content: center;
+    }
+
+    .informacion-extra, .descripcion-producto {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cabecera-principal {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .bloque-enlaces {
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 30px 0;
+    }
 }
