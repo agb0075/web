@@ -19,35 +19,75 @@
             <a href="catalogo.html">TIENDA</a>
         </nav>
 
-        <div class="audio-tienda">
-            <audio controls loop>
-                <source src="./img/audio_ambiental.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio nativo.
-            </audio>
-        </div>
-
         <div class="iconos-cabecera">
-            <span class="barra-busqueda">Buscar...</span>
-            <span>📅</span>
-            <span>🛒</span>
+            <input type="search" class="barra-busqueda" placeholder="Buscar" aria-label="Buscar productos">
+            <button type="button" class="icono-cabecera icono-perfil" aria-label="Mi perfil"></button>
+            <button type="button" class="icono-cabecera icono-carrito" aria-label="Carrito de compra"></button>
         </div>
     </header>
 
-    <main class="contenedor-paginas">
+    <main class="contenedor-paginas contenedor-inicio">
         <section class="seccion-home">
             <div class="contenido-home">
                 <h1>ELIGE MEJOR,<br>VISTE POR<br>MÁS TIEMPO.</h1>
                 <p class="subtitulo-home">PRENDAS SENCILLAS, BIEN HECHAS Y PENSADAS PARA QUEDARSE.</p>
                 <a href="catalogo.html" class="boton-coleccion">VER COLECCIÓN ➔</a>
+                <div class="audio-tienda">
+                    <span class="etiqueta-audio">AMBIENTE SONORO</span>
+                    <audio controls loop>
+                        <source src="./img/audio_ambiental.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio nativo.
+                    </audio>
+                </div>
             </div>
             
             <div class="imagen-portada">
-                <a href="catalogo.html" class="enlace-video-portada">
-                    <video autoplay loop muted playsinline>
-                        <source src="./img/video_promocional.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de videos.
-                    </video>
-                </a>
+                <video autoplay loop muted playsinline>
+                    <source src="./img/video_promocional.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </section>
+        
+        <section class="seccion-slider">
+            <div class="texto-slider">
+                <span class="etiqueta">NOVEDADES</span>
+                <h2>LA COLECCIÓN DE ESTA TEMPORADA</h2>
+                <p>Piezas sencillas en tejidos naturales, pensadas para quedarse.</p>
+                <a href="catalogo.html" class="boton-coleccion">VER TODA LA TIENDA ➔</a>
+
+                <div class="informacion-extra">
+                    <div class="fila-informacion"><span>COMPOSICIÓN</span> <span>FIBRAS NATURALES</span></div>
+                    <div class="fila-informacion"><span>ENVÍO</span> <span>GRATUITO DESDE 100 €</span></div>
+                    <div class="fila-informacion"><span>DEVOLUCIONES</span> <span>30 DÍAS</span></div>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="diapositiva">
+                    <img src="./img/traje_lino.png" alt="Traje de lino">
+                    <span class="pie-diapositiva">TRAJE DE LINO · 76 €</span>
+                </div>
+                <div class="diapositiva">
+                    <img src="./img/chaqueta_brisa.png" alt="Chaqueta Brisa">
+                    <span class="pie-diapositiva">CHAQUETA BRISA · 85 €</span>
+                </div>
+                <div class="diapositiva">
+                    <img src="./img/conjunto_matiz.png" alt="Conjunto Matiz">
+                    <span class="pie-diapositiva">CONJUNTO MATIZ · 68 €</span>
+                </div>
+                <div class="diapositiva">
+                    <img src="./img/pantalon_arena.png" alt="Pantalón Arena">
+                    <span class="pie-diapositiva">PANTALÓN ARENA · 44 €</span>
+                </div>
+                <div class="diapositiva">
+                    <img src="./img/camisa_roca.png" alt="Camisa Roca">
+                    <span class="pie-diapositiva">CAMISA ROCA · 29 €</span>
+                </div>
+                <div class="diapositiva">
+                    <img src="./img/camisa_tierra.png" alt="Camisa Tierra">
+                    <span class="pie-diapositiva">CAMISA TIERRA · 26 €</span>
+                </div>
             </div>
         </section>
     </main>
