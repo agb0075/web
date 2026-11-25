@@ -4,104 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MODA360 - Catálogo</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="cabecera-principal">
-        <div class="logo">
-            <a href="index.html">
-                <img src="./img/transparente_logo.ico" alt="MODA360" class="logo-img">
+    <header class="linea-inferior">
+        <nav class="navbar navbar-expand-lg container-fluid cabecera">
+            <a class="logo-enlace" href="index.html">
+                <img src="img/transparente_logo.ico" alt="MODA360" class="imagen-logo">
             </a>
-        </div>
-        <nav class="bloque-enlaces">
-            <a href="index.html">INICIO</a>
-            <a href="catalogo.html" class="active">TIENDA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav menu-tienda">
+                    <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalogo.html">CATÁLOGO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">NOVEDADES</a></li>
+                </ul>
+                <div class="grupo-iconos">
+                    <input type="search" class="buscador" placeholder="Buscar" aria-label="Buscar productos">
+                    <a href="inicio_sesion.html" class="boton-icono icono-perfil" aria-label="Iniciar sesión"></a>
+                    <button type="button" class="boton-icono icono-carrito" id="abrir-carrito" aria-label="Carrito de compra"></button>
+                </div>
+            </div>
         </nav>
-        <div class="iconos-cabecera">
-            <input type="search" class="barra-busqueda" placeholder="Buscar" aria-label="Buscar productos">
-            <button type="button" class="icono-cabecera icono-perfil" aria-label="Mi perfil"></button>
-            <button type="button" class="icono-cabecera icono-carrito" aria-label="Carrito de compra"></button>
-        </div>
     </header>
 
-    <main class="contenedor-paginas">
-        <section class="seccion-catalogo">
-            <div class="cabecera-catalogo">
-                <h2>CATÁLOGO</h2>
-                <span class="cantidad">6 PIEZAS</span>
+    <main class="crece">
+        <section class="container-lg seccion">
+            <div class="fila-entre-abajo mb-5">
+                <h2 class="h4 titulo-fino letra-espaciada">CATÁLOGO</h2>
+                <span class="texto-pequeno texto-gris">6 PIEZAS</span>
             </div>
-            <div class="productos">
-                <a href="productos/producto_traje_de_lino.html" class="producto-caja caja-click">
-                    <img src="./img/traje_lino.png" alt="Chaqueta">
-                    <div class="informacion-producto">
-                        <div>
-                            <span class="categoria">CHAQUETAS</span>
-                            <h3>TRAJE DE LINO</h3>
+
+            <div class="row espacio-tarjetas">
+                <div class="col-12 col-md-4">
+                    <a href="productos/producto_traje_de_lino.html" class="card tarjeta-producto h-100">
+                        <img src="img/traje_lino.png" class="foto-producto mb-3" alt="Traje de lino">
+                        <div class="fila-tarjeta">
+                            <div>
+                                <span class="categoria">CHAQUETAS</span>
+                                <h3 class="nombre-tarjeta">TRAJE DE LINO</h3>
+                            </div>
+                            <span class="negrita-suave">76 €</span>
                         </div>
-                        <span class="precio">76 €</span>
-                    </div>
-                </a>
-                <a href="productos/producto_camisa_tierra.html" class="producto-caja caja-click">
-                    <img src="./img/camisa_tierra.png" alt="Camisa Tierra">
-                    <div class="informacion-producto">
-                        <div>
-                            <span class="categoria">CAMISAS</span>
-                            <h3>CAMISA TIERRA</h3>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="productos/producto_camisa_tierra.html" class="card tarjeta-producto h-100">
+                        <img src="img/camisa_tierra.png" class="foto-producto mb-3" alt="Camisa Tierra">
+                        <div class="fila-tarjeta">
+                            <div>
+                                <span class="categoria">CAMISAS</span>
+                                <h3 class="nombre-tarjeta">CAMISA TIERRA</h3>
+                            </div>
+                            <span class="negrita-suave">26 €</span>
                         </div>
-                        <span class="precio">26 €</span>
-                    </div>
-                </a>
-                <a href="productos/producto_conjunto_matiz.html" class="producto-caja caja-click">
-                    <img src="./img/conjunto_matiz.png" alt="Conjunto Matiz">
-                    <div class="informacion-producto">
-                        <div>
-                            <span class="categoria">CONJUNTOS</span>
-                            <h3>CONJUNTO MATIZ</h3>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="productos/producto_conjunto_matiz.html" class="card tarjeta-producto h-100">
+                        <img src="img/conjunto_matiz.png" class="foto-producto mb-3" alt="Conjunto Matiz">
+                        <div class="fila-tarjeta">
+                            <div>
+                                <span class="categoria">CONJUNTOS</span>
+                                <h3 class="nombre-tarjeta">CONJUNTO MATIZ</h3>
+                            </div>
+                            <span class="negrita-suave">68 €</span>
                         </div>
-                        <span class="precio">68 €</span>
-                    </div>
-                </a>
-                <a href="productos/producto_pantalon_arena.html" class="producto-caja caja-click">
-                    <img src="./img/pantalon_arena.png" alt="Pantalón Arena">
-                    <div class="informacion-producto">
-                        <div>
-                            <span class="categoria">PANTALONES</span>
-                            <h3>PANTALÓN ARENA</h3>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="productos/producto_pantalon_arena.html" class="card tarjeta-producto h-100">
+                        <img src="img/pantalon_arena.png" class="foto-producto mb-3" alt="Pantalón Arena">
+                        <div class="fila-tarjeta">
+                            <div>
+                                <span class="categoria">PANTALONES</span>
+                                <h3 class="nombre-tarjeta">PANTALÓN ARENA</h3>
+                            </div>
+                            <span class="negrita-suave">44 €</span>
                         </div>
-                        <span class="precio">44 €</span>
-                    </div>
-                </a>
-                <a href="productos/producto_chaqueta_brisa.html" class="producto-caja caja-click">
-                    <img src="./img/chaqueta_brisa.png" alt="Chaqueta Brisa">
-                    <div class="informacion-producto">
-                        <div>
-                            <span class="categoria">CHAQUETAS</span>
-                            <h3>CHAQUETA BRISA</h3>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="productos/producto_chaqueta_brisa.html" class="card tarjeta-producto h-100">
+                        <img src="img/chaqueta_brisa.png" class="foto-producto mb-3" alt="Chaqueta Brisa">
+                        <div class="fila-tarjeta">
+                            <div>
+                                <span class="categoria">CHAQUETAS</span>
+                                <h3 class="nombre-tarjeta">CHAQUETA BRISA</h3>
+                            </div>
+                            <span class="negrita-suave">85 €</span>
                         </div>
-                        <span class="precio">85 €</span>
-                    </div>
-                </a>
-                <a href="productos/producto_camisa_roca.html" class="producto-caja caja-click">
-                    <img src="./img/camisa_roca.png" alt="Camisa Roca">
-                    <div class="informacion-producto">
-                        <div>
-                            <span class="categoria">CAMISAS</span>
-                            <h3>CAMISA ROCA</h3>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="productos/producto_camisa_roca.html" class="card tarjeta-producto h-100">
+                        <img src="img/camisa_roca.png" class="foto-producto mb-3" alt="Camisa Roca">
+                        <div class="fila-tarjeta">
+                            <div>
+                                <span class="categoria">CAMISAS</span>
+                                <h3 class="nombre-tarjeta">CAMISA ROCA</h3>
+                            </div>
+                            <span class="negrita-suave">29 €</span>
                         </div>
-                        <span class="precio">29 €</span>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="titulo-footer">NUESTRA MANERA:</div>
-        <div class="texto-footer">
-            DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+    <footer class="container-fluid pie-pagina">
+        <div class="row fila-centrada espacio-filas">
+            <div class="col-md-4 titulo-pie">NUESTRA MANERA:</div>
+            <div class="col-md-4 texto-pie">
+                DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+            </div>
+            <div class="col-md-4 texto-derechos">
+                &copy; <a href="https://ejemplo.com" class="enlace-oscuro">MODA360</a> © 2026 by <a href="https://ejemplo.com" class="enlace-oscuro">Alejandro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="enlace-oscuro">CC BY-NC-ND 4.0</a>
+            </div>
         </div>
-        <div>&copy; <a href="https://ejemplo.com">MODA360</a> © 2026 by <a href="https://ejemplo.com">Alejandro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div>
     </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="ventana-carrito">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title h5">Carrito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" id="lista-carrito"></div>
+        <div class="p-3 linea-superior">
+            <p>Total: <strong id="total-carrito"></strong></p>
+            <a href="pago.html" class="btn btn-dark boton-enviar">Pagar</a>
+            <button type="button" class="btn btn-outline-dark boton-enviar mt-2" id="vaciar-carrito">Vaciar carrito</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ventana-aviso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="aviso-titulo"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="aviso-texto"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/carrito.js" defer></script>
 </body>
 </html>

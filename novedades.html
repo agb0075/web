@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODA360 - Novedades</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="linea-inferior">
+        <nav class="navbar navbar-expand-lg container-fluid cabecera">
+            <a class="logo-enlace" href="index.html">
+                <img src="img/transparente_logo.ico" alt="MODA360" class="imagen-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav menu-tienda">
+                    <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">CATÁLOGO</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="novedades.html">NOVEDADES</a></li>
+                </ul>
+                <div class="grupo-iconos">
+                    <input type="search" class="buscador" placeholder="Buscar" aria-label="Buscar productos">
+                    <a href="inicio_sesion.html" class="boton-icono icono-perfil" aria-label="Iniciar sesión"></a>
+                    <button type="button" class="boton-icono icono-carrito" id="abrir-carrito" aria-label="Carrito de compra"></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="crece">
+        <section class="container-fluid seccion-inicio">
+            <div id="carrusel-novedades" class="carousel slide carrusel-novedades" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrusel-novedades" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+                    <button type="button" data-bs-target="#carrusel-novedades" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+                    <button type="button" data-bs-target="#carrusel-novedades" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/camisa_roca.png" alt="Nueva colección de temporada">
+                        <div class="carousel-caption solo-escritorio">
+                            <span class="etiqueta">NUEVA COLECCIÓN</span>
+                            <h2 class="h4 titulo-fino mb-0">LA TEMPORADA EMPIEZA AQUÍ</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/traje_lino.png" alt="Traje de lino de la colección">
+                        <div class="carousel-caption solo-escritorio">
+                            <span class="etiqueta">EVENTO</span>
+                            <h2 class="h4 titulo-fino mb-0">SHOWROOM DE OTOÑO · PRÓXIMAMENTE</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/chaqueta_brisa.png" alt="Chaqueta Brisa, producto nuevo">
+                        <div class="carousel-caption solo-escritorio">
+                            <span class="etiqueta">PRODUCTO NUEVO</span>
+                            <h2 class="h4 titulo-fino mb-0">CHAQUETA BRISA · YA DISPONIBLE</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-novedades" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrusel-novedades" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="container-fluid seccion-grande">
+            <div class="cabecera-seccion">
+                <div>
+                    <span class="etiqueta">ÚLTIMAS LLEGADAS</span>
+                    <h2 class="titulo-seccion">NOVEDADES</h2>
+                </div>
+                <a href="catalogo.html" class="enlace-oscuro texto-pequeno">VER TODO EL CATÁLOGO ➔</a>
+            </div>
+
+            <div class="row espacio-tarjetas">
+                <div class="col-12 col-md-4">
+                    <a href="novedad_detalle.html" class="card tarjeta-producto h-100">
+                        <img src="img/chaqueta_brisa.png" class="foto-producto mb-3" alt="Chaqueta Brisa">
+                        <div class="margen-lateral">
+                            <span class="etiqueta-nuevo mb-2">NUEVO</span>
+                            <div class="fila-entre-arriba">
+                                <div>
+                                    <span class="categoria">CHAQUETAS</span>
+                                    <h3 class="nombre-tarjeta">CHAQUETA BRISA</h3>
+                                </div>
+                                <span class="negrita-suave">85 €</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="productos/producto_pantalon_arena.html" class="card tarjeta-producto h-100">
+                        <img src="img/pantalon_arena.png" class="foto-producto mb-3" alt="Pantalón Arena">
+                        <div class="margen-lateral">
+                            <span class="etiqueta-nuevo mb-2">NUEVO</span>
+                            <div class="fila-entre-arriba">
+                                <div>
+                                    <span class="categoria">PANTALONES</span>
+                                    <h3 class="nombre-tarjeta">PANTALÓN ARENA</h3>
+                                </div>
+                                <span class="negrita-suave">44 €</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="productos/producto_conjunto_matiz.html" class="card tarjeta-producto h-100">
+                        <img src="img/conjunto_matiz.png" class="foto-producto mb-3" alt="Conjunto Matiz">
+                        <div class="margen-lateral">
+                            <span class="etiqueta-nuevo mb-2">NUEVO</span>
+                            <div class="fila-entre-arriba">
+                                <div>
+                                    <span class="categoria">CONJUNTOS</span>
+                                    <h3 class="nombre-tarjeta">CONJUNTO MATIZ</h3>
+                                </div>
+                                <span class="negrita-suave">68 €</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid seccion-final">
+            <div class="banner-oscuro">
+                <div class="espacio-movil">
+                    <span class="etiqueta texto-claro semitransparente">EVENTO</span>
+                    <h2 class="h3 titulo-fino letra-espaciada">SHOWROOM DE OTOÑO</h2>
+                    <p class="texto-pequeno semitransparente mb-0 texto-corto">Una selección de piezas de la nueva temporada, con el equipo de diseño para resolver cualquier duda sobre tallas y tejidos.</p>
+                </div>
+                <a href="catalogo.html" class="btn btn-light boton-claro">VER LA COLECCIÓN ➔</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid pie-pagina">
+        <div class="row fila-centrada espacio-filas">
+            <div class="col-md-4 titulo-pie">NUESTRA MANERA:</div>
+            <div class="col-md-4 texto-pie">
+                DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+            </div>
+            <div class="col-md-4 texto-derechos">
+                &copy; <a href="https://ejemplo.com" class="enlace-oscuro">MODA360</a> © 2026 by <a href="https://ejemplo.com" class="enlace-oscuro">Alejandro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="enlace-oscuro">CC BY-NC-ND 4.0</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="ventana-carrito">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title h5">Carrito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" id="lista-carrito"></div>
+        <div class="p-3 linea-superior">
+            <p>Total: <strong id="total-carrito"></strong></p>
+            <a href="pago.html" class="btn btn-dark boton-enviar">Pagar</a>
+            <button type="button" class="btn btn-outline-dark boton-enviar mt-2" id="vaciar-carrito">Vaciar carrito</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ventana-aviso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="aviso-titulo"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="aviso-texto"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/carrito.js" defer></script>
+</body>
+</html>

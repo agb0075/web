@@ -1,0 +1,19 @@
+@use "colores";
+
+@use "../node_modules/bootstrap/scss/bootstrap" with (
+  $body-bg: colores.$color-fondo,
+  $body-color: colores.$color-texto,
+  $font-family-sans-serif: ("Inter", sans-serif),
+  $primary: colores.$color-texto,
+  $secondary: colores.$color-gris,
+  $border-color: colores.$color-linea,
+  $link-color: colores.$color-texto,
+  $headings-font-weight: 400,
+  $card-bg: colores.$color-tarjeta,
+  $card-border-radius: 16px,
+  $input-border-radius: 0,
+  $modal-content-border-radius: 0
+);
+
+@use "general";
+@use "paginas";

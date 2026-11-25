@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODA360 - Iniciar sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="linea-inferior">
+        <nav class="navbar navbar-expand-lg container-fluid cabecera">
+            <a class="logo-enlace" href="index.html">
+                <img src="img/transparente_logo.ico" alt="MODA360" class="imagen-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav menu-tienda">
+                    <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">CATÁLOGO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">NOVEDADES</a></li>
+                </ul>
+                <div class="grupo-iconos">
+                    <input type="search" class="buscador" placeholder="Buscar" aria-label="Buscar productos">
+                    <a href="inicio_sesion.html" class="boton-icono icono-perfil active" aria-label="Iniciar sesión" aria-current="page"></a>
+                    <button type="button" class="boton-icono icono-carrito" id="abrir-carrito" aria-label="Carrito de compra"></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="principal-centrado">
+        <div class="tarjeta-cuenta">
+            <span class="etiqueta">MI CUENTA</span>
+            <h1 class="h3 letra-espaciada mb-4">INICIAR SESIÓN</h1>
+
+            <form data-titulo="Sesión iniciada" data-aviso="Has iniciado sesión correctamente. Es una demostración: no se comprueba ninguna cuenta.">
+                <div class="mb-3">
+                    <label for="email" class="form-label texto-pequeno">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="clave" class="form-label texto-pequeno">Contraseña</label>
+                    <input type="password" id="clave" name="password" class="form-control" minlength="6" required>
+                </div>
+                <div class="fila-entre-centro texto-pequeno mb-4">
+                    <div class="form-check mb-0">
+                        <input class="form-check-input" type="checkbox" id="recordar">
+                        <label class="form-check-label" for="recordar">Recordarme</label>
+                    </div>
+                    <span class="texto-gris">¿Olvidaste la contraseña?</span>
+                </div>
+                <button type="submit" class="btn btn-dark boton-enviar">ENTRAR</button>
+            </form>
+
+            <p class="texto-pequeno texto-centro mt-4 mb-0">¿No tienes cuenta? <a href="registro.html" class="enlace-oscuro negrita-suave">Regístrate</a></p>
+        </div>
+    </main>
+
+    <footer class="container-fluid pie-pagina">
+        <div class="row fila-centrada espacio-filas">
+            <div class="col-md-4 titulo-pie">NUESTRA MANERA:</div>
+            <div class="col-md-4 texto-pie">
+                DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+            </div>
+            <div class="col-md-4 texto-derechos">
+                &copy; <a href="https://ejemplo.com" class="enlace-oscuro">MODA360</a> © 2026 by <a href="https://ejemplo.com" class="enlace-oscuro">Alejandro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="enlace-oscuro">CC BY-NC-ND 4.0</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="ventana-carrito">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title h5">Carrito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" id="lista-carrito"></div>
+        <div class="p-3 linea-superior">
+            <p>Total: <strong id="total-carrito"></strong></p>
+            <a href="pago.html" class="btn btn-dark boton-enviar">Pagar</a>
+            <button type="button" class="btn btn-outline-dark boton-enviar mt-2" id="vaciar-carrito">Vaciar carrito</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ventana-aviso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="aviso-titulo"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="aviso-texto"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/carrito.js" defer></script>
+</body>
+</html>

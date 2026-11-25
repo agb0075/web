@@ -4,100 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MODA360 - Inicio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="cabecera-principal">
-        <div class="logo">
-            <a href="index.html">
-                <img src="./img/transparente_logo.ico" alt="MODA360" class="logo-img">
+    <header class="linea-inferior">
+        <nav class="navbar navbar-expand-lg container-fluid cabecera">
+            <a class="logo-enlace" href="index.html">
+                <img src="img/transparente_logo.ico" alt="MODA360" class="imagen-logo">
             </a>
-        </div>
-        <nav class="bloque-enlaces">
-            <a href="index.html" class="active">INICIO</a>
-            <a href="catalogo.html">TIENDA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav menu-tienda">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">CATÁLOGO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">NOVEDADES</a></li>
+                </ul>
+                <div class="grupo-iconos">
+                    <input type="search" class="buscador" placeholder="Buscar" aria-label="Buscar productos">
+                    <a href="inicio_sesion.html" class="boton-icono icono-perfil" aria-label="Iniciar sesión"></a>
+                    <button type="button" class="boton-icono icono-carrito" id="abrir-carrito" aria-label="Carrito de compra"></button>
+                </div>
+            </div>
         </nav>
-
-        <div class="iconos-cabecera">
-            <input type="search" class="barra-busqueda" placeholder="Buscar" aria-label="Buscar productos">
-            <button type="button" class="icono-cabecera icono-perfil" aria-label="Mi perfil"></button>
-            <button type="button" class="icono-cabecera icono-carrito" aria-label="Carrito de compra"></button>
-        </div>
     </header>
 
-    <main class="contenedor-paginas contenedor-inicio">
-        <section class="seccion-home">
-            <div class="contenido-home">
-                <h1>ELIGE MEJOR,<br>VISTE POR<br>MÁS TIEMPO.</h1>
-                <p class="subtitulo-home">PRENDAS SENCILLAS, BIEN HECHAS Y PENSADAS PARA QUEDARSE.</p>
-                <a href="catalogo.html" class="boton-coleccion">VER COLECCIÓN ➔</a>
-                <div class="audio-tienda">
-                    <span class="etiqueta-audio">AMBIENTE SONORO</span>
-                    <audio controls loop>
-                        <source src="./img/audio_ambiental.mp3" type="audio/mpeg">
-                        Tu navegador no soporta el elemento de audio nativo.
-                    </audio>
+    <main class="crece">
+        <section class="container-fluid seccion">
+            <div class="row fila-centrada espacio-grande">
+                <div class="col-md-6 texto-portada">
+                    <h1 class="titulo-portada mb-5">ELIGE MEJOR,<br>VISTE POR<br>MÁS TIEMPO.</h1>
+                    <p class="subtitulo mb-5">PRENDAS SENCILLAS, BIEN HECHAS Y PENSADAS PARA QUEDARSE.</p>
+                    <a href="catalogo.html" class="boton-borde">VER COLECCIÓN ➔</a>
+
+                    <div class="audio-ambiente mt-5">
+                        <span class="etiqueta">AMBIENTE SONORO</span>
+                        <audio controls loop class="ancho-completo">
+                            <source src="img/audio_ambiental.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio nativo.
+                        </audio>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="imagen-portada">
-                <video autoplay loop muted playsinline>
-                    <source src="./img/video_promocional.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de videos.
-                </video>
+
+                <div class="col-md-6 centrado">
+                    <div class="video-portada">
+                        <video autoplay loop muted playsinline>
+                            <source src="img/video_promocional.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                    </div>
+                </div>
             </div>
         </section>
-        
-        <section class="seccion-slider">
-            <div class="texto-slider">
-                <span class="etiqueta">NOVEDADES</span>
-                <h2>LA COLECCIÓN DE ESTA TEMPORADA</h2>
-                <p>Piezas sencillas en tejidos naturales, pensadas para quedarse.</p>
-                <a href="catalogo.html" class="boton-coleccion">VER TODA LA TIENDA ➔</a>
 
-                <div class="informacion-extra">
-                    <div class="fila-informacion"><span>COMPOSICIÓN</span> <span>FIBRAS NATURALES</span></div>
-                    <div class="fila-informacion"><span>ENVÍO</span> <span>GRATUITO DESDE 100 €</span></div>
-                    <div class="fila-informacion"><span>DEVOLUCIONES</span> <span>30 DÍAS</span></div>
-                </div>
-            </div>
+        <section class="container-fluid seccion">
+            <div class="row fila-centrada espacio-grande">
+                <div class="col-md-6 texto-novedades">
+                    <span class="etiqueta">NOVEDADES</span>
+                    <h2 class="titulo-seccion mb-4">LA COLECCIÓN DE ESTA TEMPORADA</h2>
+                    <p class="subtitulo texto-corto mb-5">Piezas sencillas en tejidos naturales, pensadas para quedarse.</p>
+                    <a href="novedades.html" class="boton-borde">VER TODAS LAS NOVEDADES ➔</a>
 
-            <div class="slider">
-                <div class="diapositiva">
-                    <img src="./img/traje_lino.png" alt="Traje de lino">
-                    <span class="pie-diapositiva">TRAJE DE LINO · 76 €</span>
+                    <ul class="list-group list-group-flush linea-superior mt-5 texto-corto">
+                        <li class="list-group-item fila-dato"><span>COMPOSICIÓN</span><span>FIBRAS NATURALES</span></li>
+                        <li class="list-group-item fila-dato"><span>ENVÍO</span><span>GRATUITO DESDE 100 €</span></li>
+                        <li class="list-group-item fila-dato"><span>DEVOLUCIONES</span><span>30 DÍAS</span></li>
+                    </ul>
                 </div>
-                <div class="diapositiva">
-                    <img src="./img/chaqueta_brisa.png" alt="Chaqueta Brisa">
-                    <span class="pie-diapositiva">CHAQUETA BRISA · 85 €</span>
-                </div>
-                <div class="diapositiva">
-                    <img src="./img/conjunto_matiz.png" alt="Conjunto Matiz">
-                    <span class="pie-diapositiva">CONJUNTO MATIZ · 68 €</span>
-                </div>
-                <div class="diapositiva">
-                    <img src="./img/pantalon_arena.png" alt="Pantalón Arena">
-                    <span class="pie-diapositiva">PANTALÓN ARENA · 44 €</span>
-                </div>
-                <div class="diapositiva">
-                    <img src="./img/camisa_roca.png" alt="Camisa Roca">
-                    <span class="pie-diapositiva">CAMISA ROCA · 29 €</span>
-                </div>
-                <div class="diapositiva">
-                    <img src="./img/camisa_tierra.png" alt="Camisa Tierra">
-                    <span class="pie-diapositiva">CAMISA TIERRA · 26 €</span>
+
+                <div class="col-md-6 centrado">
+                    <div class="galeria">
+                        <div class="imagen-galeria">
+                            <img src="img/traje_lino.png" alt="Traje de lino">
+                            <span class="texto-galeria">TRAJE DE LINO · 76 €</span>
+                        </div>
+                        <div class="imagen-galeria">
+                            <img src="img/chaqueta_brisa.png" alt="Chaqueta Brisa">
+                            <span class="texto-galeria">CHAQUETA BRISA · 85 €</span>
+                        </div>
+                        <div class="imagen-galeria">
+                            <img src="img/conjunto_matiz.png" alt="Conjunto Matiz">
+                            <span class="texto-galeria">CONJUNTO MATIZ · 68 €</span>
+                        </div>
+                        <div class="imagen-galeria">
+                            <img src="img/pantalon_arena.png" alt="Pantalón Arena">
+                            <span class="texto-galeria">PANTALÓN ARENA · 44 €</span>
+                        </div>
+                        <div class="imagen-galeria">
+                            <img src="img/camisa_roca.png" alt="Camisa Roca">
+                            <span class="texto-galeria">CAMISA ROCA · 29 €</span>
+                        </div>
+                        <div class="imagen-galeria">
+                            <img src="img/camisa_tierra.png" alt="Camisa Tierra">
+                            <span class="texto-galeria">CAMISA TIERRA · 26 €</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="titulo-footer">NUESTRA MANERA:</div>
-        <div class="texto-footer">
-            DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+    <footer class="container-fluid pie-pagina">
+        <div class="row fila-centrada espacio-filas">
+            <div class="col-md-4 titulo-pie">NUESTRA MANERA:</div>
+            <div class="col-md-4 texto-pie">
+                DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+            </div>
+            <div class="col-md-4 texto-derechos">
+                &copy; <a href="https://ejemplo.com" class="enlace-oscuro">MODA360</a> © 2026 by <a href="https://ejemplo.com" class="enlace-oscuro">Alejandro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="enlace-oscuro">CC BY-NC-ND 4.0</a>
+            </div>
         </div>
-        <div>&copy; <a href="https://ejemplo.com">MODA360</a> © 2026 by <a href="https://ejemplo.com">Alejandro</a> is licensed under <a href="https://creativecommons.org">CC BY-NC-ND 4.0</a><img src="https://creativecommons.org" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://creativecommons.org" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://creativecommons.org" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://creativecommons.org" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div>
     </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="ventana-carrito">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title h5">Carrito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" id="lista-carrito"></div>
+        <div class="p-3 linea-superior">
+            <p>Total: <strong id="total-carrito"></strong></p>
+            <a href="pago.html" class="btn btn-dark boton-enviar">Pagar</a>
+            <button type="button" class="btn btn-outline-dark boton-enviar mt-2" id="vaciar-carrito">Vaciar carrito</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ventana-aviso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="aviso-titulo"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="aviso-texto"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/carrito.js" defer></script>
 </body>
 </html>

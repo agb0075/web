@@ -4,64 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MODA360 - Camisa Roca</title>
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos.css">
 </head>
 <body>
-    <header class="cabecera-principal">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../img/transparente_logo.ico" alt="MODA360" class="logo-img">
+    <header class="linea-inferior">
+        <nav class="navbar navbar-expand-lg container-fluid cabecera">
+            <a class="logo-enlace" href="../index.html">
+                <img src="../img/transparente_logo.ico" alt="MODA360" class="imagen-logo">
             </a>
-        </div>
-        <nav class="bloque-enlaces">
-            <a href="../index.html">INICIO</a>
-            <a href="../catalogo.html">TIENDA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav menu-tienda">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="../catalogo.html">CATÁLOGO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../novedades.html">NOVEDADES</a></li>
+                </ul>
+                <div class="grupo-iconos">
+                    <input type="search" class="buscador" placeholder="Buscar" aria-label="Buscar productos">
+                    <a href="../inicio_sesion.html" class="boton-icono icono-perfil" aria-label="Iniciar sesión"></a>
+                    <button type="button" class="boton-icono icono-carrito" id="abrir-carrito" aria-label="Carrito de compra"></button>
+                </div>
+            </div>
         </nav>
-        <div class="iconos-cabecera">
-            <input type="search" class="barra-busqueda" placeholder="Buscar" aria-label="Buscar productos">
-            <button type="button" class="icono-cabecera icono-perfil" aria-label="Mi perfil"></button>
-            <button type="button" class="icono-cabecera icono-carrito" aria-label="Carrito de compra"></button>
-        </div>
     </header>
 
-    <main class="contenedor-paginas">
-        <section class="seccion-detalle">
-            <div class="imagen-detalle">
-                <img src="../img/camisa_roca.png" alt="Camisa Roca">
-            </div>
-            <div class="contenido-detalle">
-                <span class="categoria">CAMISAS</span>
-                <h2>CAMISA ROCA</h2>
-                <span class="precio-detalle">29 €</span>
-                <p class="descripcion-producto">
-                    CAMISA DE MANGA LARGA EN ALGODÓN CEPILLADO, CON BOLSILLO EN EL PECHO Y CORTE RELAJADO. UN TONO NEUTRO PARA USAR A DIARIO.
-                </p>
-                <div class="selector-tallas">
-                    <span class="etiqueta-talla">TALLA</span>
-                    <div class="tallas">
-                        <button class="boton-tallas">XS</button>
-                        <button class="boton-tallas active">S</button>
-                        <button class="boton-tallas">M</button>
-                        <button class="boton-tallas">L</button>
-                        <button class="boton-tallas">XL</button>
-                    </div>
+    <main class="crece">
+        <section class="container-fluid seccion">
+            <div class="row fila-centrada espacio-grande">
+                <div class="col-md-6">
+                    <img src="../img/camisa_roca.png" class="foto-detalle" alt="Camisa Roca">
                 </div>
-                <div class="informacion-extra">
-                    <div class="fila-informacion"><span>COMPOSICIÓN</span> <span>100% ALGODÓN</span></div>
-                    <div class="fila-informacion"><span>ENVÍO</span> <span>GRATUITO DESDE 100 €</span></div>
-                    <div class="fila-informacion"><span>DEVOLUCIONES</span> <span>30 DÍAS</span></div>
+
+                <div class="col-md-6 texto-centro-movil">
+                    <span class="categoria">CAMISAS</span>
+                    <h2 class="nombre-producto">CAMISA ROCA</h2>
+                    <p class="precio-ficha">29 €</p>
+                    <p class="descripcion-producto">
+                        CAMISA DE MANGA LARGA EN ALGODÓN CEPILLADO, CON BOLSILLO EN EL PECHO Y CORTE RELAJADO. UN TONO NEUTRO PARA USAR A DIARIO.
+                    </p>
+
+                    <span class="etiqueta">TALLA</span>
+                    <div class="fila-tallas">
+                        <input type="radio" class="btn-check" name="talla" id="talla-xs" value="XS">
+                        <label class="btn btn-outline-dark boton-talla" for="talla-xs">XS</label>
+
+                        <input type="radio" class="btn-check" name="talla" id="talla-s" value="S" checked>
+                        <label class="btn btn-outline-dark boton-talla" for="talla-s">S</label>
+
+                        <input type="radio" class="btn-check" name="talla" id="talla-m" value="M">
+                        <label class="btn btn-outline-dark boton-talla" for="talla-m">M</label>
+
+                        <input type="radio" class="btn-check" name="talla" id="talla-l" value="L">
+                        <label class="btn btn-outline-dark boton-talla" for="talla-l">L</label>
+
+                        <input type="radio" class="btn-check" name="talla" id="talla-xl" value="XL">
+                        <label class="btn btn-outline-dark boton-talla" for="talla-xl">XL</label>
+                    </div>
+
+                    <button type="button" class="btn btn-dark boton-comprar"
+                            data-anadir data-id="camisa-roca" data-nombre="CAMISA ROCA" data-precio="29">
+                        AÑADIR AL CARRITO
+                    </button>
+
+                    <ul class="list-group list-group-flush linea-superior">
+                        <li class="list-group-item fila-dato"><span>COMPOSICIÓN</span><span>100% ALGODÓN</span></li>
+                        <li class="list-group-item fila-dato"><span>ENVÍO</span><span>GRATUITO DESDE 100 €</span></li>
+                        <li class="list-group-item fila-dato"><span>DEVOLUCIONES</span><span>30 DÍAS</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="titulo-footer">NUESTRA MANERA:</div>
-        <div class="texto-footer">
-            DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+    <footer class="container-fluid pie-pagina">
+        <div class="row fila-centrada espacio-filas">
+            <div class="col-md-4 titulo-pie">NUESTRA MANERA:</div>
+            <div class="col-md-4 texto-pie">
+                DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+            </div>
+            <div class="col-md-4 texto-derechos">
+                &copy; <a href="https://ejemplo.com" class="enlace-oscuro">MODA360</a> © 2026 by <a href="https://ejemplo.com" class="enlace-oscuro">Alejandro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="enlace-oscuro">CC BY-NC-ND 4.0</a>
+            </div>
         </div>
-        <div>&copy; <a href="https://ejemplo.com">MODA360</a> © 2026 by <a href="https://ejemplo.com">Alejandro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div>
     </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="ventana-carrito">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title h5">Carrito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" id="lista-carrito"></div>
+        <div class="p-3 linea-superior">
+            <p>Total: <strong id="total-carrito"></strong></p>
+            <a href="../pago.html" class="btn btn-dark boton-enviar">Pagar</a>
+            <button type="button" class="btn btn-outline-dark boton-enviar mt-2" id="vaciar-carrito">Vaciar carrito</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ventana-aviso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="aviso-titulo"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="aviso-texto"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js" defer></script>
+    <script src="../js/carrito.js" defer></script>
 </body>
 </html>

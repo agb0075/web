@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODA360 - Chaqueta Brisa (novedad)</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="linea-inferior">
+        <nav class="navbar navbar-expand-lg container-fluid cabecera">
+            <a class="logo-enlace" href="index.html">
+                <img src="img/transparente_logo.ico" alt="MODA360" class="imagen-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav menu-tienda">
+                    <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">CATÁLOGO</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="novedades.html">NOVEDADES</a></li>
+                </ul>
+                <div class="grupo-iconos">
+                    <input type="search" class="buscador" placeholder="Buscar" aria-label="Buscar productos">
+                    <a href="inicio_sesion.html" class="boton-icono icono-perfil" aria-label="Iniciar sesión"></a>
+                    <button type="button" class="boton-icono icono-carrito" id="abrir-carrito" aria-label="Carrito de compra"></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid seccion crece">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb texto-pequeno">
+                <li class="breadcrumb-item"><a href="index.html" class="enlace-oscuro">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="novedades.html" class="enlace-oscuro">Novedades</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Chaqueta Brisa</li>
+            </ol>
+        </nav>
+
+        <div class="row fila-arriba espacio-grande">
+            <div class="col-md-6">
+                <img src="img/chaqueta_brisa.png" class="foto-detalle" alt="Chaqueta Brisa">
+            </div>
+
+            <div class="col-md-6 texto-centro-movil">
+                <span class="etiqueta-nuevo mb-3">NUEVO</span>
+                <h1 class="nombre-producto">CHAQUETA BRISA</h1>
+                <p class="precio-ficha">85 €</p>
+                <p class="descripcion-producto">
+                    Chaqueta ligera de solapa estrecha y cierre de un solo botón. Pensada para las tardes frescas y para llevar por capas durante la temporada.
+                </p>
+
+                <span class="etiqueta">TALLA</span>
+                <div class="fila-tallas">
+                    <input type="radio" class="btn-check" name="talla" id="talla-xs" value="XS">
+                    <label class="btn btn-outline-dark boton-talla" for="talla-xs">XS</label>
+
+                    <input type="radio" class="btn-check" name="talla" id="talla-s" value="S" checked>
+                    <label class="btn btn-outline-dark boton-talla" for="talla-s">S</label>
+
+                    <input type="radio" class="btn-check" name="talla" id="talla-m" value="M">
+                    <label class="btn btn-outline-dark boton-talla" for="talla-m">M</label>
+
+                    <input type="radio" class="btn-check" name="talla" id="talla-l" value="L">
+                    <label class="btn btn-outline-dark boton-talla" for="talla-l">L</label>
+
+                    <input type="radio" class="btn-check" name="talla" id="talla-xl" value="XL">
+                    <label class="btn btn-outline-dark boton-talla" for="talla-xl">XL</label>
+                </div>
+
+                <button type="button" class="btn btn-dark boton-comprar"
+                        data-anadir data-id="chaqueta-brisa" data-nombre="CHAQUETA BRISA" data-precio="85">
+                    AÑADIR AL CARRITO
+                </button>
+
+                
+                <div class="accordion texto-izquierda" id="detalles-producto">
+                    <div class="accordion-item sin-fondo">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#detalle-1" aria-expanded="true" aria-controls="detalle-1">
+                                DETALLES DEL PRODUCTO
+                            </button>
+                        </h2>
+                        <div id="detalle-1" class="accordion-collapse collapse show" data-bs-parent="#detalles-producto">
+                            <div class="accordion-body cuerpo-acordeon texto-pequeno texto-gris">
+                                Solapa estrecha, cierre con un solo botón y corte recto. Se ajusta bien sobre camisetas básicas y sobre prendas de punto.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item sin-fondo">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#detalle-2" aria-expanded="false" aria-controls="detalle-2">
+                                COMPOSICIÓN Y CUIDADOS
+                            </button>
+                        </h2>
+                        <div id="detalle-2" class="accordion-collapse collapse" data-bs-parent="#detalles-producto">
+                            <div class="accordion-body cuerpo-acordeon texto-pequeno texto-gris">
+                                100% fibras naturales. Lavar a mano o en ciclo delicado a 30 °C y secar a la sombra.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item sin-fondo">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#detalle-3" aria-expanded="false" aria-controls="detalle-3">
+                                ENVÍOS Y DEVOLUCIONES
+                            </button>
+                        </h2>
+                        <div id="detalle-3" class="accordion-collapse collapse" data-bs-parent="#detalles-producto">
+                            <div class="accordion-body cuerpo-acordeon texto-pequeno texto-gris">
+                                Devoluciones gratuitas durante 30 días desde la recepción del pedido.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container-fluid pie-pagina">
+        <div class="row fila-centrada espacio-filas">
+            <div class="col-md-4 titulo-pie">NUESTRA MANERA:</div>
+            <div class="col-md-4 texto-pie">
+                DISEÑAMOS MENOS, PERO MEJOR. MATERIALES HONESTOS, FORMAS DURADERAS Y UNA PALETA QUE VIVE BIEN CON TODO.
+            </div>
+            <div class="col-md-4 texto-derechos">
+                &copy; <a href="https://ejemplo.com" class="enlace-oscuro">MODA360</a> © 2026 by <a href="https://ejemplo.com" class="enlace-oscuro">Alejandro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="enlace-oscuro">CC BY-NC-ND 4.0</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="ventana-carrito">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title h5">Carrito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" id="lista-carrito"></div>
+        <div class="p-3 linea-superior">
+            <p>Total: <strong id="total-carrito"></strong></p>
+            <a href="pago.html" class="btn btn-dark boton-enviar">Pagar</a>
+            <button type="button" class="btn btn-outline-dark boton-enviar mt-2" id="vaciar-carrito">Vaciar carrito</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ventana-aviso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="aviso-titulo"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="aviso-texto"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/carrito.js" defer></script>
+</body>
+</html>

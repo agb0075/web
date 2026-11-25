@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "bootstrap": "5.3.9",
+    "sass": "1.108.2"
+  },
+  "scripts": {
+    "build": "sass sass/main.scss estilos.css --no-source-map --style=compressed --quiet-deps"
+  },
+  "sass/main": {
+    "scss estilos": {
+      "css --no-source-map --style": "expanded --quiet-deps"
+    }
+  }
+}
